@@ -4,8 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Links css -->
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/reset.css">
 </head>
 <body>
-    <h1>Proyecto M1</h1>
+<!-- 3 secciones 
+        -Mis tecnologías favoritas
+            -Tarjetas
+        -Mis actividades favoritas
+            -Un serie de Inputs para que el usuario pueda ingresar TÍTULO, DESCRIPCIÓN y URL DE IMAGEN. 
+            -Un contenedor que luego mostrará las tarjetas con las actividades creadas.
+-->
+    <header class="header" style="background-color: rgba(0, 255, 255, 0.553);">
+        <h1 class="header__h1">Antonio Maldonado</h1>
+
+        <nav class="header__nav">
+            <ul class="nav__ul--header">
+                <li class="ul__li--header">
+                    <a href="#sobremi" class="li__a--header">Sobre mí</a>
+                </li>
+                <li class="ul__li--header">
+                    <a href="#tecnologias" class="li__a--header">Tecnologías</a>
+                </li>
+                <li class="ul__li--header">
+                    <a href="#actividades" class="li__a--header">Actividades</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section__main--sobreMi" id="sobremi">
+            <div class="section__div--container-sobreMi">
+                <div class="section__div--Perfil-sobreMi">
+                    <span class="div__span--sobreMi">
+                        ¿Quien soy?
+                    </span>
+    
+                    <img src="/assets/face.jpg" alt="Foto de perfil" class="div__img--sobreMi">
+                </div>
+                <div class="section__div--texto-sobreMi">
+                    Vivo en Lima, Perú.
+                    <br>
+                    Nunca se me dieron bien la escuela, sin embargo, siempre me ha gustado aprender cosas nuevas en el día a día y los retos grandes. Al crecer me di cuenta que la universidad y/o instituto no iban a ser algo que se adecuase a mi persona, así que opte por otras alternativas más alineadas a mi forma de aprender.
+                    <br>
+                    Como estudiar de manera <span class="div__span--sobreMiIn">autodidacta</span>
+                    <!-- Ciclista, estudiante de programación y escritor en proceso...
+                    <br>
+                    Me gustan los retos difíciles, y bueno; para RETOS DIFÍCILES que más que aprender a programar. -->
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="section__main--tecnologias" id="tecnologias">
+            <div class="section__div--tecnologias">
+                <ul class="div__ul--tecnologias">
+                    <li class="ul__li--tecnologias">
+                        <a href="" class="li__a--tecnologias">
+                            HTML
+                            <img src="/assets/html.svg" alt="" class="a__img--tecnologias">
+                        </a>
+                    </li>
+                    <li class="ul__li--tecnologias">
+                        <a href="" class="li__a--tecnologias">
+                            CSS
+                            <img src="/assets/css.svg" alt="" class="a__img--tecnologias">
+                        </a>
+                    </li>
+                    <li class="ul__li--tecnologias">
+                        <a href="" class="li__a--tecnologias">
+                            JAVASCRIPT
+                            <img src="/assets/javascript.svg" alt="" class="a__img--tecnologias">
+                        </a>
+                    </li>
+                    <li class="ul__li--tecnologias">
+                        <a href="" class="li__a--tecnologias">
+                            GIT
+                            <img src="/assets/git.svg" alt="" class="a__img--tecnologias">
+                        </a>
+                    </li>
+                    <li class="ul__li--tecnologias">
+                        <a href="" class="li__a--tecnologias">
+                            GITHUB
+                            <img src="/assets/github.svg" alt="" class="a__img--tecnologias">
+                        </a>
+                    </li>
+                    <li class="ul__li--tecnologias">
+                        <a href="" class="li__a--tecnologias">
+                            RUBY
+                            <img src="/assets/ruby.svg" alt="" class="a__img--tecnologias">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <span class="section__span--tecnologias">Mis tecnologías favoritas</span>
+        </section>
+
+        <section class="section__main--actividades" id="actividades">
+            <span class="section__div--actividades">
+                Mis actividades favoritas
+            </span>
+
+            <div class="section__div--actividades">
+                <input class="div__input--text-actividades" placeholder="Nombre de la actividad" type="text" name="" id="">
+                <input class="div__input--text-actividades" placeholder="Descripción de la actividad" type="text" name="" id="">
+
+                <input class="div__input--url-actividades" placeholder="Link de la Imagen" type="url" name="" id="">
+                
+                <input class="div__input--submit-actividades" type="submit" value="Agregar actividad">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"></footer>
 </body>
 </html>
