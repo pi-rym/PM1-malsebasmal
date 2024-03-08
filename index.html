@@ -6,18 +6,11 @@
     <title>Document</title>
 
     <!-- Links css -->
-    <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
-<!-- 3 secciones 
-        -Mis tecnologías favoritas
-            -Tarjetas
-        -Mis actividades favoritas
-            -Un serie de Inputs para que el usuario pueda ingresar TÍTULO, DESCRIPCIÓN y URL DE IMAGEN. 
-            -Un contenedor que luego mostrará las tarjetas con las actividades creadas.
--->
-    <header class="header" style="background-color: rgba(0, 255, 255, 0.553);">
+    <header class="header">
         <h1 class="header__h1">Antonio Maldonado</h1>
 
         <nav class="header__nav">
@@ -60,46 +53,38 @@
         </section>
 
         <section class="section__main--tecnologias" id="tecnologias">
-            <div class="section__div--tecnologias">
                 <ul class="div__ul--tecnologias">
                     <li class="ul__li--tecnologias">
                         <a href="" class="li__a--tecnologias">
-                            HTML
                             <img src="/assets/html.svg" alt="" class="a__img--tecnologias">
                         </a>
                     </li>
                     <li class="ul__li--tecnologias">
                         <a href="" class="li__a--tecnologias">
-                            CSS
                             <img src="/assets/css.svg" alt="" class="a__img--tecnologias">
                         </a>
                     </li>
                     <li class="ul__li--tecnologias">
                         <a href="" class="li__a--tecnologias">
-                            JAVASCRIPT
                             <img src="/assets/javascript.svg" alt="" class="a__img--tecnologias">
                         </a>
                     </li>
                     <li class="ul__li--tecnologias">
                         <a href="" class="li__a--tecnologias">
-                            GIT
                             <img src="/assets/git.svg" alt="" class="a__img--tecnologias">
                         </a>
                     </li>
                     <li class="ul__li--tecnologias">
                         <a href="" class="li__a--tecnologias">
-                            GITHUB
                             <img src="/assets/github.svg" alt="" class="a__img--tecnologias">
                         </a>
                     </li>
                     <li class="ul__li--tecnologias">
                         <a href="" class="li__a--tecnologias">
-                            RUBY
                             <img src="/assets/ruby.svg" alt="" class="a__img--tecnologias">
                         </a>
                     </li>
                 </ul>
-            </div>
             <span class="section__span--tecnologias">Mis tecnologías favoritas</span>
         </section>
 
@@ -108,14 +93,14 @@
                 Mis actividades favoritas
             </span>
 
-            <div class="section__div--actividades">
-                <input class="div__input--text-actividades" placeholder="Nombre de la actividad" type="text" name="" id="">
-                <input class="div__input--text-actividades" placeholder="Descripción de la actividad" type="text" name="" id="">
+            <form class="section__form--actividades">
+                <input class="form__input--text-actividades" placeholder="Nombre de la actividad" type="text" name="" id="">
+                <input class="form__input--text-actividades" placeholder="Descripción de la actividad" type="text" name="" id="">
 
-                <input class="div__input--url-actividades" placeholder="Link de la Imagen" type="url" name="" id="">
+                <input class="form__input--url-actividades" placeholder="Link de la Imagen" type="url" name="" id="">
                 
-                <input class="div__input--submit-actividades" type="submit" value="Agregar actividad">
-            </div>
+                <input class="form__input--submit-actividades" type="submit" value="Agregar actividad">
+            </form>
         </section>
     </main>
 
