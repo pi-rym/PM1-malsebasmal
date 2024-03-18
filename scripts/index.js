@@ -19,7 +19,7 @@ class Repository{
 		createActivity = (title, description, imgUrl) => {
 				const id = this.id++
 				const instanciaActivity = new Activity(id, title, description, imgUrl)
-				return this.activities.push(instanciaActivity)
+				return this.activities.unshift(instanciaActivity)
 		}
 
 		deleteActivity = (idInstancia) => {
@@ -28,11 +28,15 @@ class Repository{
 }
 let repositoryPrincipal = new Repository()
 
+
+
 function createActivityTarget(obj){
 	const {id, title, description, imgUrl} = obj;
 
 	let divTarget = document.createElement("div")
 	divTarget.classList.add("target")
+
+	divTarget.setAttribute("data-id", id)
 
 	let h3Title = document.createElement("h3");
 		h3Title.textContent = title;
@@ -51,10 +55,8 @@ function activityHTML(){
 		sectionForTargets.innerHTML = "";
 	
 	let listCompleteActivities = repositoryPrincipal.getAllActivities()
-	let activitiesConvertHTML = listCompleteActivities.map(objActivityIndex => createActivityTarget(objActivityIndex)) //! No estoy seguro del parámetro que estoy pasando.
+	let activitiesConvertHTML = listCompleteActivities.map(objActivityIndex => createActivityTarget(objActivityIndex))
 	activitiesConvertHTML.forEach(activityIndex => sectionForTargets.append(activityIndex))
-
-	//?return sectionForTargets //No se si se retorna esto
 }
 
 function buttonConnection() {
@@ -83,9 +85,18 @@ function buttonConnection() {
 		inputNameActivity.value = ""
 		inputDescriptionActivity.value = ""
 		inputUrlActivity.value = ""
-		console.log(inputUrlValue)
-		return true
+
 	}
+
+	let sectionActivitiesTargets = document.querySelector(".section__main--actividadesAgregadas")
+	sectionActivitiesTargets.addEventListener("click", (event) => {
+		const targetElement = event.target.closest(".target");
+    if (targetElement) {
+      const idActivityTarget = parseInt(targetElement.dataset.id);
+      repositoryPrincipal.deleteActivity(idActivityTarget);
+      targetElement.remove();
+    }
+	})
 }
 
 let buttonAction = document.querySelector(".form__input--button-actividades");
