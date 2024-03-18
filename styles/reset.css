@@ -13,9 +13,10 @@
 :root {
   --blanco: #ffffff;
   /* Tipografía */
-  --tipo-principal: 'Lato', sans-serif;
-  --tipo-secundaria: 'Poppins', sans-serif;
+  --tipo-principal: 'Roboto Condensed Variable', sans-serif;
+  --tipo-secundaria: 'Roboto Condensed Variable', sans-serif;
 }
+
 
 /* Las adaptamos al modo oscuro */
 @media (prefers-color-scheme: dark) {
