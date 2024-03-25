@@ -26,22 +26,19 @@ describe("Test para las CLASS", () => {
       });
     });
 
-    // describe("Class Repository", () => {
-    //   it("NO debe de tener propiedades en el constructor", () => {
-
-    //   });
-    //   it("Debe de tener las propiedades activities e id", () => {
-        
-    //   });
-    //   it("La propiedad activities debe de ser de TIPO ARRAY", () => {
-
-    //   });
-    //   it("La propiedad id debe de estar inicializada en 0", () => {
-
-    //   });
-      
-    //   describe("Métodos en la Class Repository", () => {
-        
-    //   })
-    // });
+    describe("Class Repository", () => {
+      it("NO debe de tener propiedades en el constructor", () => {
+        expect(Repository.prototype.constructor.length).toBe(0)
+      });
+      it("Debe de tener las propiedades activities e id dentro del constructor", () => {
+        expect(new Repository().hasOwnProperty("activities")).toBeTruthy();
+        expect(new Repository().hasOwnProperty("id")).toBeTruthy();
+      });
+        it("La propiedad activities debe de ser de TIPO ARRAY", () => {
+          expect(Array.isArray(new Repository().activities)).toBeTruthy();
+        });
+        it("La propiedad id debe de estar inicializada en 0", () => {
+          expect(new Repository().id).toBe(0)
+        });
+    });
 });
